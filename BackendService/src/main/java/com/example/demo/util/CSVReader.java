@@ -6,21 +6,26 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.entity.Country;
 
+@Service
 public class CSVReader {
 
 	public static void main(String[] args) {
 
        
     //Test method getCountry();
-	ArrayList<Country> resultList=getContry();
+	//Create object for testing
+	CSVReader csvreader=new CSVReader();
+	ArrayList<Country> resultList=csvreader.getContry();
 	
 	resultList.forEach(System.out::println);
 
     }
  
- 	public static ArrayList<Country> getContry()
+ 	public  ArrayList<Country> getContry()
  	{
  		//List country
  		ArrayList<Country> listCountry=new ArrayList<>();
